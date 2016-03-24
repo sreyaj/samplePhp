@@ -47,7 +47,7 @@ build:
   ci:
     - php --version
     
-    - if [ "$SHIPPABLE_php_VERSION" == "7.0" ]; then foobar; fi
+    - if [ "$SHIPPABLE_PHP_VERSION" == "7.0" ]; then foobar; fi
     - echo $FOO
     - echo $GOO
     - echo $TOO
