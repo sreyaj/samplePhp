@@ -40,6 +40,7 @@ build:
     - echo $FOO
     - echo $GOO
     - echo $TOO
+    - echo $SOO
   
  # cache: true
   
