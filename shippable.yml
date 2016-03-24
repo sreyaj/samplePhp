@@ -30,6 +30,11 @@ env:
     #- secure: RcnvRPGsUMRdYm2AWA8vWaDLPNnSgRq4yQYfD6TsoF4HNE8kff/7743cqCiO/w8+A+mcFusJU9lz1Bwq94K2SHdmk8i08OISq09B5XJRJnw32J65d5VKwflm4iwVmOlPGiZsPFUTShGkztLQYoWDbPekNy1u19KmM07KJ1Lgd8j8m6wFd8C0VLqKFZ2UCCtpidhVzclwWQvTYv4DgDDD+nEavyF3gyBuYDTEY1o5oovCN/sLz6QMbv97h7ddBRFn3f1aA60YtetxqAb+vY4DF4kyZXRQfnvrRJXFsL/Wyy6XarJeU922t1UURDTyetWSvf8xgKnHmwX+vGtk6cSWTQ==
     - GOO=GUBU
     - SOO=SUBU
+matrix:
+  include:
+    - php: 5.6
+  exclude:
+    - php: 5.4
 build:
   
   pre_ci_boot:
