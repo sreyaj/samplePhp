@@ -6,7 +6,7 @@ php:
   - 5.4
   - 5.5
   #- 5.6
-  #- 7.0
+  - 7.0
   
 #services:
  # - mysql
@@ -35,6 +35,8 @@ matrix:
     - php: 5.6
   exclude:
     - php: 5.4
+  allow_failures:
+    - php: 7.0
 build:
   
   pre_ci_boot:
@@ -44,6 +46,8 @@ build:
     
   ci:
     - php --version
+    
+    - if [ "$SHIPPABLE_PHP_VERSION" == "7.0" ]; then foobar; fi
     - echo $FOO
     - echo $GOO
     - echo $TOO
