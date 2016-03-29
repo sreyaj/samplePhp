@@ -54,8 +54,8 @@ build:
     - echo $TOO
     - echo $SOO
   
- # cache: true
+  cache: true
   
-  #cache_dir_list: 
-    #- $SHIPPABLE_BUILD_DIR  
+  cache_dir_list: 
+    - $SHIPPABLE_BUILD_DIR  
     
