@@ -20,7 +20,7 @@ services:
   #- couchdb
   #- neo4j
 env:
-  #global:
+  global:
    # - secure: nVSBflfGlVX2W58J/TlP4AOWvYSojA0Ry1egi1G6nEQBjxGKemIOLmSKA8f0d2DUXrTBDazpm37zLe6P5ujjOxX7kqvEY/VVbdtNW+FifQxRTM0wqNioSJA5dOB8yzABwvO+7mop3rR86ruG9HAZhe9if2S8+/5n+IvbQP8TRQpsx0lrrh6RJSHLYMI5TPGu7thJqNGFduyPYKfYYcGCUSyrqgIA73O2WMo/WpG0HM/MCkRSbauqxcH3UcsQIbPODV6YPSc/ArUH1FIX5dKYA0wHQHuq1pd3sUMKU4FcVx+BPapY0RYqXAbkWdZel5BFgqAZ6T7F0uwmVgRpMbnGYA==
     - m1=one
     - m2=two
