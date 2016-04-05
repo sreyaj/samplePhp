@@ -45,8 +45,8 @@ matrix:
      # env: ship@=test
   exclude:
     - php: 5.4
-      env:
-        - foo=fubu
+      #env:
+       # - foo=fubu
   #allow_failures:
    # - php: 7.0
 build:
