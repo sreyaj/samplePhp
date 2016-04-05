@@ -20,8 +20,8 @@ services:
   #- couchdb
   #- neo4j
 env:
-  #global:
-  - secure: nVSBflfGlVX2W58J/TlP4AOWvYSojA0Ry1egi1G6nEQBjxGKemIOLmSKA8f0d2DUXrTBDazpm37zLe6P5ujjOxX7kqvEY/VVbdtNW+FifQxRTM0wqNioSJA5dOB8yzABwvO+7mop3rR86ruG9HAZhe9if2S8+/5n+IvbQP8TRQpsx0lrrh6RJSHLYMI5TPGu7thJqNGFduyPYKfYYcGCUSyrqgIA73O2WMo/WpG0HM/MCkRSbauqxcH3UcsQIbPODV6YPSc/ArUH1FIX5dKYA0wHQHuq1pd3sUMKU4FcVx+BPapY0RYqXAbkWdZel5BFgqAZ6T7F0uwmVgRpMbnGYA==
+  global:
+    - secure: 5uPV5uWY7ck75CG0xCbZl0igso1vCVQOBsYeI2ch0VD68Ydl05P1ikO27n033klzAZ2b6djuYRuvokHtEpmh3poVcux8LptNaHWMYuIbar2neWT8dqeIwtQYPZkdEv7xzdoe2RzcSYvG5AabuDtf1gOxSOO/tKccF6jlBzWK5GF6j18rA5XRs+gN/pUprVS0O+GHzejceydwOaXUssqBYVGBIq5Sc3gdD69cuvdpbHGm23CeG0kLYuTzUXNGNiOc2QcfUHIU+gEBCiYGh4vafh0HswVTROXB7qLKYqv2sSIQqLiF+HDHDKtDYS1qZcvH3KVfNfEbW37QHPNt38ZLvQ==
    # - m1=one
    # - m2=two
   #matrix:
@@ -38,8 +38,8 @@ build:
     
   ci:
     - php --version
-    - echo $FOO
-    - echo $SOO
+    - echo $foo
+    - echo $bar
   
  # cache: true
   
