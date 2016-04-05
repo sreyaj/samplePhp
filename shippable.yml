@@ -4,10 +4,12 @@ language: php
 #Version number
 php:
   - 5.4
-  #- 5.5
-  #- 5.6
+  - 5.5
+  - 5.6
   #- 7.0
-  
+env:
+  - foo=fubu
+  - goo=gubu
 #services:
  # - mysql
   #- postgres
@@ -34,15 +36,17 @@ php:
     #- m3=three
     #- m4=four
 matrix:
-  include:
-    - php: 5.6
-      env:
-        - foo=fubu
-    - php: 5.5
+  #include:
+   # - php: 5.6
+    #  env:
+     #   - foo=fubu
+    #- php: 5.5
     #- php: 7.0
      # env: ship@=test
-  #exclude:
-   # - php: 5.4
+  exclude:
+    - php: 5.4
+      env:
+        - foo=fubu
   #allow_failures:
    # - php: 7.0
 build:
