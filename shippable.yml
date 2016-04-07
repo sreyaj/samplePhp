@@ -69,7 +69,7 @@ build:
     image_name: drydock/u12phpall
     image_tag: prod
     pull: true
-    
+     
   ci:
     - php --version
     - if [ "$SHIPPABLE_PHP_VERSION" == "5.4" ]; then foobar; fi
