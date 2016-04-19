@@ -8,7 +8,40 @@ php:
   #- 5.6
   #- 7.0
   
+
+ 
+
 build:
-  ci:
-    - php --version
+ # cache: true
+  #pre_ci:
+   # - docker build -t=shippabledocker/shiphitchcock4_sample_node21 .
+
+  pre_ci_boot:
+    image_name: shippabledocker/shiphitchcock4_sample_node21
+    image_tag: latest
+    pull: false
+    options: '--privileged=true --net=bridge -e FOO=true -e BOO=false'
     
+   ci:
+    - php --version  
+    
+ 
+
+  post_ci:
+    - docker build -t=shippabledocker/shiphitchcock4_sample_node21:$BRANCH.$BUILD_NUMBER .
+    - docker push shippabledocker/shiphitchcock4_sample_node21:$BRANCH.$BUILD_NUMBER
+   # - docker push shippabledocker/shiphitchcock4_sample_node21
+    #- docker build -t=shippabledocker/shiphitchcock4_sample_node2 .
+   # - docker push shippabledocker/shiphitchcock4_sample_node21
+   # - docker push shippabledocker/shiphitchcock2_sample_node2:$BUILD_NUMBER
+   # - docker tag -f shippabledocker/shiphitchcock2_sample_node2:latest shippabledocker/shiphitchcock2_sample_node2:tip
+    #- docker tag -f shippabledocker/shiphitchcock2_sample_node2:latest shippabledocker/shiphitchcock2_sample_node2:$BUILD_NUMBER
+
+integrations:
+  hub:
+    - integrationName: ship-docker
+      type: docker    
+      #branches:
+      #  except:   
+       #   - preci  
+     
