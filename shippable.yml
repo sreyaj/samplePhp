@@ -19,7 +19,7 @@ build:
   pre_ci_boot:
     image_name: shippabledocker/shiphitchcock4_sample_node21
     image_tag: latest
-    pull: false
+    pull: true
     options: '--privileged=true --net=bridge -e FOO=true -e BOO=false'
     
    ci:
@@ -28,7 +28,7 @@ build:
  
 
   post_ci:
-    - docker build -t=shippabledocker/shiphitchcock4_sample_node21:$BRANCH.$BUILD_NUMBER .
+   # - docker build -t=shippabledocker/shiphitchcock4_sample_node21:$BRANCH.$BUILD_NUMBER .
     - docker push shippabledocker/shiphitchcock4_sample_node21:$BRANCH.$BUILD_NUMBER
    # - docker push shippabledocker/shiphitchcock4_sample_node21
     #- docker build -t=shippabledocker/shiphitchcock4_sample_node2 .
